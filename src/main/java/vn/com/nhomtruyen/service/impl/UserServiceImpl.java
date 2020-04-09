@@ -49,20 +49,19 @@ public class UserServiceImpl implements UserService {
 
 	private final UserRepository userRepository;
 	private final UserInfoRepository userInfoRepository;
-	private final UserMapper userMapper;
+	private UserMapper userMapper;
 	private final RoleRepository roleRepository;
 	private final GroupRepository groupRepository;
 	private final FunctionRepository functionRepository;
 
 	private final PasswordEncoder passwordEncoder;
 
-	public UserServiceImpl(UserRepository userRepository, UserInfoRepository userInfoRepository, UserMapper userMapper,
+	public UserServiceImpl(UserRepository userRepository, UserInfoRepository userInfoRepository,
 			RoleRepository roleRepository, GroupRepository groupRepository, PasswordEncoder passwordEncoder,
 			FunctionRepository functionRepository) {
 		super();
 		this.userRepository = userRepository;
 		this.userInfoRepository = userInfoRepository;
-		this.userMapper = userMapper;
 		this.roleRepository = roleRepository;
 		this.groupRepository = groupRepository;
 		this.passwordEncoder = passwordEncoder;

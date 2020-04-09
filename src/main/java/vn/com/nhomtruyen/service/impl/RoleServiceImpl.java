@@ -34,13 +34,11 @@ public class RoleServiceImpl implements RoleService {
 
 	private final Logger log = LoggerFactory.getLogger(RoleServiceImpl.class);
 	private final RoleRepository roleRepository;
-	private final RoleMapper roleMapper;
+	private RoleMapper roleMapper;
 
-	public RoleServiceImpl(RoleRepository roleRepository, FunctionRepository functionRepository,
-			RoleMapper roleMapper) {
+	public RoleServiceImpl(RoleRepository roleRepository, FunctionRepository functionRepository) {
 		super();
 		this.roleRepository = roleRepository;
-		this.roleMapper = roleMapper;
 	}
 
 	/**

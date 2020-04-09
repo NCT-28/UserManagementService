@@ -29,12 +29,11 @@ public class FunctionServiceImpl implements FunctionService {
 
 	private final Logger log = LoggerFactory.getLogger(FunctionServiceImpl.class);
 	private final FunctionRepository functionRepository;
-	private final FunctionMapper functionMapper;
+	private  FunctionMapper functionMapper;
 
-	public FunctionServiceImpl(FunctionRepository functionRepository, FunctionMapper functionMapper) {
+	public FunctionServiceImpl(FunctionRepository functionRepository) {
 		super();
 		this.functionRepository = functionRepository;
-		this.functionMapper = functionMapper;
 	}
 
 	@Override
